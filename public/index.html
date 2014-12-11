@@ -27,7 +27,7 @@
           $('#tasks').append('<li>' + task.name + '</li>');
         }
 
-        $('#new_task').submit(functio{
+        $('#new_task').submit(function(e) {
           $.post('/tasks', $(this).serialize(), addTask);
           this.reset();
           e.preventDefault();
